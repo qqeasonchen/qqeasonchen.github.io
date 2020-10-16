@@ -18,4 +18,4 @@ github_username:  qqeasonchen
 # Build settings
 markdown: kramdown
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-architect
