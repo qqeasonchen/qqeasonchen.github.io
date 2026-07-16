@@ -332,6 +332,78 @@ const ARTICLES = [
     type: "技术文档",
     tags: ["Eason Chen", "EventMesh", "AI Agent", "A2A", "MCP", "云原生"],
     excerpt: "EventMesh v2.0 拥抱 MCP / A2A 协议，从事件中间件演进为 AI Agent 协作总线（Agent Collaboration Bus），基于 CloudEvents 实现异步 RPC over JSON-RPC 2.0，并可与 LangChain / AutoGen 集成。"
+  },
+  {
+    title: "qqeasonchen/EventMesh（个人仓库）",
+    source: "github.com/qqeasonchen",
+    url: "https://github.com/qqeasonchen/EventMesh",
+    date: "—",
+    type: "仓库",
+    tags: ["Eason Chen", "qqeasonchen", "chenguangsheng", "EventMesh", "Apache", "开源"],
+    excerpt: "Eason Chen 个人账号下的 Apache EventMesh fork / 镜像，持续同步上游 apache/eventmesh 的 Issue / PR（含 A2A Gateway 等最新特性），是 EventMesh 源码与贡献的直接入口。"
+  },
+  {
+    title: "分布式应用提效框架 Apache EventMesh（视频回放）",
+    source: "InfoQ 视频",
+    url: "https://www.infoq.cn/video/cwhtMM6TXQBsCAzj3ZyE",
+    date: "2021-11",
+    type: "视频",
+    tags: ["陈广胜", "微众银行", "EventMesh", "Apache", "演讲", "视频"],
+    excerpt: "陈广胜在 ArchSummit 全球架构师峰会（深圳站）的同名演讲视频回放，系统讲解 EventMesh 的演进、核心架构及在微众银行的探索与实践。"
+  },
+  {
+    title: "RocketMQ x EventMesh Open Day 线上直播周（二）",
+    source: "阿里云开发者社区 / 直播",
+    url: "https://developer.aliyun.com/live/247182",
+    date: "2022",
+    type: "视频",
+    tags: ["陈广胜", "EventMesh", "RocketMQ", "Apache", "直播", "演讲"],
+    excerpt: "RocketMQ 5.0 遇见 EventMesh 金融专场 Open Day 线上直播：陈广胜作为分享嘉宾讲解《Apache EventMesh：事件驱动分布式应用多运行时》，联动微众银行、平安人寿等金融企业。"
+  },
+  {
+    title: "EventMesh: Event-Driven Distributed Application Runtime（英文版）",
+    source: "ApacheCon Asia 2021",
+    url: "https://apachecon.com/acasia2021/sessions/1154.html",
+    date: "2021-08",
+    type: "演讲",
+    tags: ["Eason Chen", "陈广胜", "EventMesh", "Apache", "ApacheCon", "演讲"],
+    excerpt: "Eason Chen 在 ApacheCon Asia 2021 的英文版演讲页：如何用事件驱动架构（EDA）解决现代分布式应用架构的复杂性，EventMesh 的定位与模式。"
+  },
+  {
+    title: "Apache RocketMQ 开发者沙龙深圳｜微众银行消息总线的架构演进",
+    source: "CSDN / Apache RocketMQ 社区",
+    url: "https://blog.csdn.net/weixin_39860915/article/details/97346429",
+    date: "2019",
+    type: "演讲",
+    tags: ["陈广胜", "微众银行", "RocketMQ", "消息总线", "开源", "演讲"],
+    excerpt: "陈广胜（Apache RocketMQ 深圳社区联合发起人）在 RocketMQ 开发者沙龙分享微众银行消息总线：基于 RocketMQ 的同步调用、灰度发布、同城多活、消息代理、熔断等生产级增强。"
+  },
+  {
+    title: "解锁事务消息，发力大数据流计算 — Apache RocketMQ 再聚深圳",
+    source: "CSDN / Apache RocketMQ 社区",
+    url: "https://blog.csdn.net/weixin_39860915/article/details/98863377",
+    date: "2019",
+    type: "活动",
+    tags: ["陈广胜", "微众银行", "RocketMQ", "消息中间件", "开源", "活动"],
+    excerpt: "陈广胜第二次在深圳 RocketMQ Meetup 分享，基于内部真实案例介绍 RocketMQ 在金融领域的使用场景，以及消息总线在银行架构中的重要作用。"
+  },
+  {
+    title: "微众银行和一代人的“开源武林”（微博版）",
+    source: "微博头条文章",
+    url: "https://weibo.com/ttarticle/p/show?id=2309404905750865510557",
+    date: "2023",
+    type: "文章",
+    tags: ["陈广胜", "EventMesh", "开源", "ASF Member", "文章"],
+    excerpt: "《微众银行和一代人的开源武林》的微博发布版：讲述陈广胜如何从零叩开 Apache 之门、发起 ALC Shenzhen，到 2023 年当选 ASF Member 的开源进阶之路。"
+  },
+  {
+    title: "解决 SaaS 组合式应用集成标准化问题 — EventMesh 在华为的实践应用（视频）",
+    source: "哔哩哔哩 / Apache EventMesh",
+    url: "https://www.bilibili.com/video/BV1cA4y1d7uw/",
+    date: "2022-06",
+    type: "视频",
+    tags: ["Eason Chen", "陈广胜", "EventMesh", "华为云", "Serverless", "视频"],
+    excerpt: "EventMesh 官方在 B 站发布的实践视频：以华为云事件网格（EventGrid）为运行时引擎，讲解 EventMesh 如何解决 SaaS 组合式应用集成标准化问题。"
   }
 ];
 
