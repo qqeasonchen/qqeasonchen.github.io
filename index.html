@@ -1,23 +1,150 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>陈广胜 (Eason Chen) · 微众银行 · Apache EventMesh PMC Chair</title>
+  <meta name="description" content="陈广胜 (Eason Chen / qqeasonchen / chenguangsheng) — 微众银行资深技术专家，Apache EventMesh PMC Chair，ASF Member。可搜索的公开文章、演讲与开源项目知识库。" />
+  <meta name="keywords" content="陈广胜, Eason Chen, qqeasonchen, chenguangsheng, 微众银行, WeBank, EventMesh, DeFiBus, Apache, 开源, 云原生" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- 背景：极光 + 神经网络 -->
+  <canvas id="neural-bg"></canvas>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="grid-overlay"></span>
+  </div>
 
-<div class="home">
+  <!-- 顶部导航 -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>
+      <span class="brand-name">陈广胜<span class="brand-en"> / Eason Chen</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">关于</a>
+      <a href="#knowledge">知识库</a>
+      <a href="#projects">项目</a>
+      <a href="#timeline">历程</a>
+      <a href="https://github.com/qqeasonchen" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+    </nav>
+  </header>
 
-  <h1 class="page-heading">Posts</h1>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge reveal">
+          <span class="pulse"></span> 微众银行 · Apache EventMesh · 云原生
+        </div>
+        <h1 class="hero-title reveal">
+          <span class="grad-text" data-text="陈广胜">陈广胜</span>
+          <span class="hero-en">Eason Chen</span>
+        </h1>
+        <p class="hero-sub reveal">
+          <span id="typed"></span><span class="caret">▍</span>
+        </p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <!-- 搜索框（核心功能） -->
+        <div class="search-wrap reveal">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <input id="search" type="text" autocomplete="off" placeholder="搜索：微众银行 / 陈广胜 / chenguangsheng / qqeasonchen / EventMesh …" />
+            <kbd class="search-kbd">/</kbd>
+          </div>
+          <div class="chips" id="chips"></div>
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <div class="hero-stats reveal" id="hero-stats"></div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="向下滚动">↓</a>
+    </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="kicker">// 01 — 关于我</span>
+        <h2>一个把“事件”当作生命线的开源人</h2>
+      </div>
+      <div class="about-grid">
+        <div class="card glass about-bio reveal">
+          <p id="bio-text"></p>
+          <div class="focus-tags" id="focus-tags"></div>
+        </div>
+        <div class="about-side">
+          <div class="card glass alias-card reveal">
+            <h3>身份即链接</h3>
+            <p class="muted">同一个人在不同世界的名字，点击任意别名即可在知识库中检索：</p>
+            <div class="alias-list" id="alias-list"></div>
+          </div>
+          <div class="badge-grid" id="badge-grid"></div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- KNOWLEDGE BASE -->
+    <section class="section" id="knowledge">
+      <div class="section-head reveal">
+        <span class="kicker">// 02 — 知识库</span>
+        <h2>与我相关的一切，皆可检索</h2>
+        <p class="muted">聚合网上与陈广胜 / Eason Chen 相关的文章、演讲、采访与官方信息。实时本地搜索，无需联网即可过滤。</p>
+      </div>
+      <div class="kb-toolbar reveal">
+        <div class="kb-count" id="kb-count"></div>
+        <div class="kb-filters" id="kb-filters"></div>
+        <button class="kb-clear" id="kb-clear">清除筛选</button>
+      </div>
+      <div class="kb-grid" id="kb-grid"></div>
+      <div class="kb-empty" id="kb-empty" hidden>
+        <p>没有匹配的结果。试试 <button class="linklike" data-q="微众银行">微众银行</button> 或 <button class="linklike" data-q="EventMesh">EventMesh</button>。</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <span class="kicker">// 03 — 开源项目</span>
+        <h2>代码即影响力</h2>
+      </div>
+      <div class="proj-grid" id="proj-grid"></div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" id="timeline">
+      <div class="section-head reveal">
+        <span class="kicker">// 04 — 开源历程</span>
+        <h2>从一行代码到 Apache 顶级项目</h2>
+      </div>
+      <div class="timeline" id="timeline-list"></div>
+    </section>
+
+    <!-- CTA / LINKS -->
+    <section class="section cta-section">
+      <div class="card glass cta-card reveal">
+        <h2>想连接更多信号？</h2>
+        <p class="muted">除了下方链接，本站的每一篇文章都可直接点击跳转原文。也可以按下 <kbd>/</kbd> 随时唤起搜索。</p>
+        <div class="cta-links" id="cta-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> 陈广胜 (Eason Chen) · qqeasonchen</span>
+      <span class="footer-meta">静态站点 · GitHub Pages · 无后端 · 数据可检索</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
