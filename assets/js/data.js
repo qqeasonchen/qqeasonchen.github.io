@@ -528,10 +528,17 @@ const AWARDS = [
     url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08v9PVPaXtMCZQ%2bBL33DJH3D5t1DI0vULnXe3WhIqfIpsA="
   },
   {
-    title: "银行机构科技风险管理研究一类成果奖 · 基于分布式架构的同城多中心多活架构",
+    title: "中国人民银行银行科技发展奖 · 基于分布式架构的同城多中心多活架构",
+    org: "中国人民银行（微众银行）",
+    date: "—",
+    desc: "微众银行「基于分布式架构的同城多中心多活架构」成果荣获中国人民银行银行科技发展奖。CNKI 国家科技成果库确认陈广胜位列成果完成人之一，与马智涛、卢道和、杨军等 17 人共同完成；研究期 2016–2018，在两地三中心基础上实现同城任一数据中心故障不影响业务，达成同城 RPO=0、RTO≈0，是银行级高可用的标杆实践。该成果同期还获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。",
+    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
+  },
+  {
+    title: "银行机构科技风险管理研究一类成果奖 · 基于分布式架构的同城三中心多活研究与实践",
     org: "中国银保监会（微众银行）",
     date: "2018",
-    desc: "微众银行课题「基于分布式架构的同城三中心多活研究与实践」从两百余项参选课题中脱颖而出，荣获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）——这是与「中国人民银行银行科技发展奖」并列、但颁发主体不同的另一项部级科技奖，并非银行科技发展奖。对应成果「基于分布式架构的同城多中心多活架构」于 2019 年入库国家科技成果库。陈广胜位列成果完成人之一，与马智涛、卢道和、杨军等 17 人共同完成；研究期 2016–2018，在两地三中心基础上实现同城任一数据中心故障不影响业务，达成同城 RPO=0、RTO≈0，是银行级高可用的标杆实践。",
+    desc: "微众银行课题「基于分布式架构的同城三中心多活研究与实践」从两百余项参选课题中脱颖而出，荣获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。这是与「中国人民银行银行科技发展奖」并列、但颁发主体不同的另一项部级科技奖。对应成果「基于分布式架构的同城多中心多活架构」亦获央行银行科技发展奖，陈广胜为成果完成人之一。",
     url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
   },
   {
