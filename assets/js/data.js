@@ -421,13 +421,13 @@ const PATENTS = [
   },
   {
     title: "基于消息中间件的服务切换方法及装置",
-    number: "CN106375447A",
-    date: "2016 申请 · 2017 公布",
+    number: "CN106375447B",
+    date: "2016 申请 · 2020 授权",
     inventors: "陈广胜；贾立华；范瑞彬",
     assignee: "深圳前海微众银行股份有限公司",
-    status: "发明专利",
+    status: "已授权",
     abstract: "在接收端异常时，关闭第一发送端消息队列出入口并开启第二发送端，将请求消息路由至第二消息队列，消除接收端与发送端之间的耦合关系，实现服务无感切换。",
-    url: "https://patentimages.storage.googleapis.com/82/b2/c1/b964a8e38ff66f/CN106375447A.pdf"
+    url: "http://patents.google.com/patent/CN106375447B/zh"
   },
   {
     title: "日志管理方法、系统以及计算机可读存储介质",
@@ -508,6 +508,96 @@ const PATENTS = [
     status: "驳回（未授权）",
     abstract: "依据应用系统指定的 VPN 名称建立对应连接，使应用系统访问消息中间件中对应 VPN 名称的静态资源，解决消息中间件内部资源隔离问题，避免依赖第三方权限控制。",
     url: "https://m.tianyancha.com/zhuanli/13c460dea09f4550a736ba912858ed7a"
+  },
+  {
+    title: "消息分发方法及服务器",
+    number: "CN106302647B",
+    date: "2016 申请 · 2019 授权",
+    inventors: "陈井波；陈广胜；贾立华；范瑞彬；李启凡",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "服务器接收消息获取请求，依据映射关系确定存储业务消息的第一消息队列并监听，有消息则读取并发送给接收端，无消息则接收端等待；通过推拉结合实现消息分发，降低服务器负载压力。",
+    url: "https://m.qizhidao.com/patents/zhuanli/WZIP_34dac2d4ee0f75a808ea75e5d11398f7.html"
+  },
+  {
+    title: "消息服务系统及其实现方法",
+    number: "CN107454171A",
+    date: "2017 申请 · 2017 公布",
+    inventors: "卢道和；杨军；陈广胜；陈翼",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利",
+    abstract: "消息服务系统包括消息缓冲集群、处理集群、存储集群与备份集群，各集群分布式部署于多个独立数据中心，降低部署成本、提升系统运行效率与可靠性。",
+    url: "https://patentimages.storage.googleapis.com/ad/28/80/12dbe43ead80db/CN107454171A.pdf"
+  },
+  {
+    title: "流量切换方法、装置、设备及计算机可读存储介质",
+    number: "CN109587068B",
+    date: "2018 申请 · 2022 授权",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "分别建立服务请求方、服务提供方与各消息通道的网络连接，按流量分配比值与通道选择算法精确选择消息通道，实现对构成流量的每条消息在不同消息通道间的精确切换。",
+    url: "https://patentimages.storage.googleapis.com/1c/01/47/9ddbfa0f761935/CN109587068B.pdf"
+  },
+  {
+    title: "队列调整方法、装置、设备及计算机可读存储介质",
+    number: "CN110300067B",
+    date: "2019 申请 · 2022 授权",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "根据消息消费者的心跳信号获取 Topic 订阅信息，判断是否有新订阅/取消订阅的 Topic，自适应扩展或缩减 Topic 队列数量，保持消费者与队列负载均衡。",
+    url: "https://patentimages.storage.googleapis.com/8e/6b/16/71e56fd49931ee/CN110300067B.pdf"
+  },
+  {
+    title: "信息发送方法、装置、设备及可读存储介质",
+    number: "CN110247808B",
+    date: "2019 申请 · 2024 授权",
+    inventors: "卢道和；杨军；陈广胜；梁荣华；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "每间隔预设时间段从配置中心获取待多发主题信息，按队列算法确定目标发送方式并发送，降低信息发送失败次数，提升金融级消息投递成功率。",
+    url: "https://patentimages.storage.googleapis.com/ac/50/57/15b3acf0ec18ea/CN110247808B.pdf"
+  },
+  {
+    title: "服务扩容与迁移方法、装置、系统、设备及可读存储介质",
+    number: "CN110324184B",
+    date: "2019 申请 · 2021 授权",
+    inventors: "卢道和；杨军；陈广胜；薛炜明",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "服务管理平台接收服务登记请求并登记，根据任务类型在消息中间件中创建第一/第二消息队列并调整目标队列权限，服务扩容与迁移对在线业务无影响。",
+    url: "https://patentimages.storage.googleapis.com/80/9b/a0/1aecd17b3a990d/CN110324184B.pdf"
+  },
+  {
+    title: "消息中间件上、下线方法、装置、设备及可读存储介质",
+    number: "CN110474917B",
+    date: "2019 申请 · 2024 授权",
+    inventors: "陈一鎏；卢道和；杨军；陈广胜；熊梦飞；梁炜强；李慧敏；薛炜明",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "接收消息中间件下线请求，将其主题权限置为只读并验证吞吐量与消费进度，通过后置为下线、权限置为不可读写，保证上下线时不丢消息、不出现客户端超时。",
+    url: "https://patentimages.storage.googleapis.com/58/fc/97/8880f09ca90427/CN110474917B.pdf"
+  },
+  {
+    title: "消息传输方法、系统、装置、设备及计算机可读存储介质",
+    number: "CN110753129A",
+    date: "2019 申请 · 2020 公布",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁炜强；颜宏冰",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利申请",
+    abstract: "消息服务端接收消息客户端经消息中间件发来的请求消息后生成响应消息，附加客户端标识并经响应主题回传，由中间件按标识精准投递，减少为每个客户端建队列的资源消耗。",
+    url: "https://patentimages.storage.googleapis.com/fd/5b/61/68b3039ae923a4/CN110753129A.pdf"
+  },
+  {
+    title: "一种多语言消息代理方法及装置",
+    number: "CN111756844B",
+    date: "2020 申请 · 授权",
+    inventors: "卢道和；杨军；陈广胜；梁荣华；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "代理服务器接收应用服务器基于命令字协议发送的第一报文，转换为消息中间件客户端使用的第二报文并发送，使消息中间件与应用服务器即便使用不同程序语言也能通信，降低运营维护成本。",
+    url: "http://patents.google.com/patent/CN111756844B/zh"
   }
 ];
 
