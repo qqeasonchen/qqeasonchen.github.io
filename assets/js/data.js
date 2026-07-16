@@ -521,6 +521,20 @@ const AWARDS = [
     url: "https://m.thepaper.cn/newsdetail_forward_9359561"
   },
   {
+    title: "中国人民银行银行科技发展奖 — 安全可控的分布式金融级消息总线",
+    org: "中国人民银行（微众银行）",
+    date: "—",
+    desc: "微众银行「安全可控的分布式金融级消息总线」项目荣获中国人民银行银行科技发展奖。Eason Chen（陈广胜）位列成果完成人（第 5 完成人），与马智涛、卢道和、杨军等共同完成；项目实现同城多数据中心多活、毫秒级低延时流转与金融级高可靠，是 DeFiBus 消息总线的获奖技术底座。",
+    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08v9PVPaXtMCZQ%2bBL33DJH3D5t1DI0vULnXe3WhIqfIpsA="
+  },
+  {
+    title: "银行机构科技风险管理研究一类成果奖 — 同城三中心多活",
+    org: "中国银保监会（微众银行）",
+    date: "2018",
+    desc: "微众银行「基于分布式架构的同城三中心多活研究与实践」课题从两百余项参选课题中脱颖而出，荣获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。Eason Chen（陈广胜）作为同城多活与消息总线相关专利的发明人，是该多活架构落地的核心技术人员之一；课题实现同城 RPO=0、RTO≈0。",
+    url: "https://www.thepaper.cn/newsDetail_forward_2916845"
+  },
+  {
     title: "2023 OSCAR 尖峰开源人物（开源先锋人物）",
     org: "OSCAR 开源先锋人物评选",
     date: "2023",
