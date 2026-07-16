@@ -70,21 +70,6 @@ const PROJECTS = [
   }
 ];
 
-// 演讲 / 活动时间线
-const TIMELINE = [
-  { year: "2018", title: "金融级消息服务平台建设实践", sub: "腾讯云开发者社区撰文 · RocketMQ 资深 Contributor", tag: "文章" },
-  { year: "2018", title: "Apache RocketMQ Meetup 深圳", sub: "消息总线的架构演进", tag: "演讲" },
-  { year: "2021.02", title: "EventMesh 进入 Apache 孵化器", sub: "国内金融行业首个 ASF 孵化项目", tag: "里程碑" },
-  { year: "2021.08", title: "ApacheCon Asia 2021", sub: "EventMesh: 事件驱动分布式应用运行时", tag: "演讲" },
-  { year: "2021.11", title: "ArchSummit 全球架构师峰会（深圳）", sub: "分布式应用提效框架 Apache EventMesh", tag: "演讲" },
-  { year: "2022", title: "ALC Shenzhen · 深圳大数据开源汇", sub: "作为 ALC Shenzhen Lead 开场演讲", tag: "社区" },
-  { year: "2023.02", title: "EventMesh 毕业投票全票通过", sub: "以发起人身份公布 TLP 毕业投票结果", tag: "里程碑" },
-  { year: "2023.03", title: "EventMesh 毕业为 Apache 顶级项目 (TLP)", sub: "以 PMC Chair 身份发布毕业寄语", tag: "里程碑" },
-  { year: "2023", title: "当选 Apache 软件基金会 Member", sub: "第 55 位华人 ASF Member", tag: "里程碑" },
-  { year: "2023.08", title: "CommunityOverCode Asia 2023 Keynote", sub: "主论坛演讲《社群长青》", tag: "演讲" },
-  { year: "2024.06", title: "ArchSummit 深圳 2024", sub: "EventMesh + Function：Serverless 新火花", tag: "演讲" }
-];
-
 // 可搜索的文章 / 内容知识库（核心功能）
 const ARTICLES = [
   {
@@ -359,4 +344,4 @@ const LINKS = [
 ];
 
 // 暴露到全局
-window.SITE_DATA = { PROFILE, BADGES, PROJECTS, TIMELINE, ARTICLES, LINKS };
+window.SITE_DATA = { PROFILE, BADGES, PROJECTS, ARTICLES, LINKS };
