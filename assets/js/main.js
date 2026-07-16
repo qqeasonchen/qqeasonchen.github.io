@@ -117,22 +117,15 @@
       <span class="cl-sub">${esc(l.sub)}</span>
     </a>`).join("");
 
-  /* ---------- 知识库：分类 + 列表 + 搜索 ---------- */
-  const searchEl = $("#search");
+  /* ---------- 知识库：分类 + 列表 ---------- */
   const listEl = $("#kb-grid");
   const countEl = $("#kb-count");
   const emptyEl = $("#kb-empty");
-  const chipsEl = $("#chips");
   const catsEl = $("#kb-cats");
   const filtersEl = $("#kb-filters");
 
-  // 快捷搜索 chip（用户明确要求可搜的关键词）
-  const QUICK = ["微众银行", "陈广胜", "chenguangsheng", "qqeasonchen", "EventMesh", "DeFiBus", "开源", "Serverless"];
-  let activeQuick = "";
   let activeCat = "全部";
   let activeFilter = "";
-
-  chipsEl.innerHTML = QUICK.map((q) => `<button class="chip" data-q="${esc(q)}">${esc(q)}</button>`).join("");
 
   // 文章按 type 归并为大类
   const CAT_GROUPS = {
@@ -195,17 +188,14 @@
   }
 
   function render() {
-    const q = (searchEl.value || "").trim().toLowerCase();
+    const q = "";
     const list = allItems.filter((it) => {
-      const matchQ = !q || haystack(it).includes(q);
       const matchC = activeCat === "全部" || it.__cat === activeCat;
       const matchF = !activeFilter || (it.__kind === "article" && it.tags.includes(activeFilter));
-      const matchQuick = !activeQuick || haystack(it).includes(activeQuick.toLowerCase());
-      return matchQ && matchC && matchF && matchQuick;
+      return matchC && matchF;
     });
 
     countEl.textContent = `▸ 命中 ${list.length} / ${allItems.length} 条`
-      + (q ? ` · 关键词「${q}」` : "")
       + (activeCat !== "全部" ? ` · 分类「${activeCat}」` : "");
 
     if (!list.length) {
@@ -251,20 +241,10 @@
   }
 
   // 事件
-  searchEl.addEventListener("input", render);
   catsEl.addEventListener("click", (e) => {
     const b = e.target.closest(".cat"); if (!b) return;
     activeCat = b.dataset.c;
     $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === activeCat));
-    render();
-  });
-  chipsEl.addEventListener("click", (e) => {
-    const b = e.target.closest(".chip"); if (!b) return;
-    const q = b.dataset.q;
-    activeQuick = activeQuick === q ? "" : q;
-    $$(".chip", chipsEl).forEach((c) => c.classList.toggle("active", c.dataset.q === activeQuick));
-    if (activeQuick) { searchEl.value = activeQuick; }
-    else if (!activeFilter) { searchEl.value = ""; }
     render();
   });
   filtersEl.addEventListener("click", (e) => {
@@ -275,36 +255,23 @@
     render();
   });
   $("#kb-clear").addEventListener("click", () => {
-    searchEl.value = ""; activeQuick = ""; activeFilter = ""; activeCat = "全部";
-    $$(".chip", chipsEl).forEach((c) => c.classList.remove("active"));
+    activeFilter = ""; activeCat = "全部";
     $$(".fchip", filtersEl).forEach((c) => c.classList.remove("active"));
     $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === "全部"));
     render();
   });
-  // 别名点击 → 搜索
-  $("#alias-list").addEventListener("click", (e) => {
-    const b = e.target.closest(".alias"); if (!b) return;
-    searchEl.value = b.dataset.q;
-    activeQuick = ""; activeFilter = ""; activeCat = "全部";
-    $$(".chip", chipsEl).forEach((c) => c.classList.remove("active"));
-    $$(".fchip", filtersEl).forEach((c) => c.classList.remove("active"));
-    $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === "全部"));
-    render();
+  // 别名点击 → 跳转知识库
+  $("#alias-list").addEventListener("click", () => {
     $("#knowledge").scrollIntoView({ behavior: "smooth" });
   });
-  // 空状态里的链接
-  emptyEl.addEventListener("click", (e) => {
-    const b = e.target.closest(".linklike"); if (!b) return;
-    searchEl.value = b.dataset.q; render();
-  });
 
-  // 快捷键 "/" 聚焦搜索
+  // 快捷键 Escape 清除筛选
   document.addEventListener("keydown", (e) => {
-    if (e.key === "/" && document.activeElement !== searchEl) {
-      e.preventDefault(); searchEl.focus();
-    }
-    if (e.key === "Escape" && document.activeElement === searchEl) {
-      searchEl.value = ""; render(); searchEl.blur();
+    if (e.key === "Escape") {
+      activeFilter = ""; activeCat = "全部";
+      $$(".fchip", filtersEl).forEach((c) => c.classList.remove("active"));
+      $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === "全部"));
+      render();
     }
   });
 
