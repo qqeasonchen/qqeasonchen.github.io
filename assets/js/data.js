@@ -73,13 +73,17 @@ const PROJECTS = [
 
 // 演讲 / 活动时间线
 const TIMELINE = [
+  { year: "2018", title: "微众银行金融级消息服务平台建设实践", sub: "腾讯云开发者社区撰文 · RocketMQ 资深 Contributor", tag: "文章" },
   { year: "2018", title: "Apache RocketMQ Meetup 深圳", sub: "微众银行消息总线的架构演进", tag: "演讲" },
   { year: "2021.02", title: "EventMesh 进入 Apache 孵化器", sub: "国内金融行业首个 ASF 孵化项目", tag: "里程碑" },
   { year: "2021.08", title: "ApacheCon Asia 2021", sub: "EventMesh: 事件驱动分布式应用运行时", tag: "演讲" },
   { year: "2021.11", title: "ArchSummit 全球架构师峰会（深圳）", sub: "分布式应用提效框架 Apache EventMesh", tag: "演讲" },
   { year: "2022", title: "ALC Shenzhen · 深圳大数据开源汇", sub: "作为 ALC Shenzhen Lead 开场演讲", tag: "社区" },
+  { year: "2023.02", title: "EventMesh 毕业投票全票通过", sub: "以发起人身份公布 TLP 毕业投票结果", tag: "里程碑" },
   { year: "2023.03", title: "EventMesh 毕业为 Apache 顶级项目 (TLP)", sub: "以 PMC Chair 身份发布毕业寄语", tag: "里程碑" },
-  { year: "2023", title: "EventMesh Function 演讲", sub: "面向事件流处理的 Serverless 新火花", tag: "演讲" }
+  { year: "2023", title: "当选 Apache 软件基金会 Member", sub: "第 55 位华人 ASF Member", tag: "里程碑" },
+  { year: "2023.08", title: "CommunityOverCode Asia 2023 Keynote", sub: "主论坛演讲《社群长青》", tag: "演讲" },
+  { year: "2024.06", title: "ArchSummit 深圳 2024", sub: "EventMesh + Function：Serverless 新火花", tag: "演讲" }
 ];
 
 // 可搜索的文章 / 内容知识库（核心功能）
@@ -218,6 +222,87 @@ const ARTICLES = [
     type: "官方",
     tags: ["陈广胜", "qqeasonchen", "chenguangsheng", "EventMesh", "Apache", "官方"],
     excerpt: "官方团队页：Guangsheng Chen @qqeasonchen（chenguangsheng@apache.org）— EventMesh PMC Chair。"
+  },
+  {
+    title: "微众银行的金融级消息服务平台建设实践和思考",
+    source: "腾讯云开发者社区 / 云数智圈",
+    url: "https://cloud.tencent.com/developer/article/1377971",
+    date: "2018-12",
+    type: "技术文章",
+    tags: ["陈广胜", "微众银行", "RocketMQ", "消息总线", "金融级", "本人撰写"],
+    excerpt: "陈广胜亲述微众银行金融级消息服务平台的建设实践：负载均衡收敛服务端、惊群效应治理，以及基于 Apache RocketMQ 的社区分支维护思考。"
+  },
+  {
+    title: "CommunityOverCode Asia 2023 Keynote：社群长青 — 开源社群如何可持续发展",
+    source: "开源社 / CSDN",
+    url: "https://blog.csdn.net/kaiyuanshe/article/details/132241940",
+    date: "2023-08",
+    type: "主题演讲",
+    tags: ["陈广胜", "EventMesh", "Apache", "CommunityOverCode", "开源治理", "演讲"],
+    excerpt: "陈广胜受邀在 CommunityOverCode Asia 2023 大会主论坛（Keynote）分享《社群长青》，结合分布式金融新核心转型与 EventMesh 案例，探讨开源社群的可持续发展。"
+  },
+  {
+    title: "精彩回顾｜CommunityOverCode Asia 2023 圆满落幕",
+    source: "InfoQ 写作社区",
+    url: "https://xie.infoq.cn/article/e2e6c96782a0a01b51a586d8b",
+    date: "2023-08",
+    type: "大会回顾",
+    tags: ["陈广胜", "EventMesh", "Apache", "CommunityOverCode", "云原生", "活动"],
+    excerpt: "大会回顾提到：微众银行技术专家、ASF Member 陈广胜分享数字金融时代云原生技术的应用与创新，及其在分布式金融新核心转型中的重要性。"
+  },
+  {
+    title: "ArchSummit 2024 深圳：EventMesh + Function — 面向事件流处理的 Serverless 新火花",
+    source: "ArchSummit 全球架构师峰会（讲义）",
+    url: "https://yuquepre.yuque.com/crazygenius/newfire/lwmogmfhex4gpg0z",
+    date: "2024-06",
+    type: "演讲",
+    tags: ["陈广胜", "微众银行", "EventMesh", "Serverless", "演讲"],
+    excerpt: "2024 全球架构师峰会（深圳站）陈广胜分享《EventMesh + Function：面向事件流处理的 Serverless 新火花》，讲义收录于大会资料合集。"
+  },
+  {
+    title: "[RESULT][VOTE] Graduate Apache EventMesh as a Top Level Project",
+    source: "Apache 官方邮件列表（lists.apache.org）",
+    url: "https://lists.apache.org/thread/dq0nx64ov1k7lbbdnml4f8dpw104p5wk",
+    date: "2023-02",
+    type: "一手记录",
+    tags: ["Eason Chen", "陈广胜", "EventMesh", "Apache", "毕业投票", "官方"],
+    excerpt: "Eason Chen 作为发起人在 Apache 邮件列表公布 EventMesh 毕业为顶级项目的投票结果：38 票 +1、0 反对（含 12 张 PPMC 绑定票）。"
+  },
+  {
+    title: "Apache EventMesh 董事会会议纪要（Eason Chen 报告）",
+    source: "Apache 软件基金会 Whimsy",
+    url: "https://whimsy1-ec2-va.apache.org/board/minutes/EventMesh.html",
+    date: "2023",
+    type: "一手记录",
+    tags: ["Eason Chen", "EventMesh", "Apache", "PMC Chair", "官方"],
+    excerpt: "作为 PMC Chair，Eason Chen 向 ASF 董事会持续提交 EventMesh 项目季度报告，记录社区成员变化、版本发布与社区健康度。"
+  },
+  {
+    title: "CommunityOverCode Asia 2023 参会记（提及与陈广胜合照）",
+    source: "pil0txia 个人博客",
+    url: "https://www.pil0txia.com/post/2023-08-28_community-over-code-asia-2023",
+    date: "2023-08",
+    type: "参会随笔",
+    tags: ["陈广胜", "EventMesh", "RocketMQ", "CommunityOverCode", "社区"],
+    excerpt: "一位 EventMesh 贡献者的参会随笔，记录与陈广胜及 EventMesh / RocketMQ 成员的合照与交流，侧写社区氛围。"
+  },
+  {
+    title: "Apache EventMesh 官方博客",
+    source: "eventmesh.apache.org",
+    url: "https://eventmesh.apache.org/blog",
+    date: "—",
+    type: "官方",
+    tags: ["Eason Chen", "EventMesh", "Apache", "Serverless", "官方"],
+    excerpt: "EventMesh 官方博客与公告，收录项目毕业为 Apache 顶级项目的官方声明，Eason Chen 以 Vice President of Apache EventMesh 身份发言。"
+  },
+  {
+    title: "深度解读分布式应用提效框架 Apache EventMesh（阿里云开发者社区）",
+    source: "阿里云开发者社区",
+    url: "https://developer.aliyun.com/article/894349",
+    date: "2022-05",
+    type: "演讲整理",
+    tags: ["陈广胜", "微众银行", "EventMesh", "Apache", "云原生", "演讲"],
+    excerpt: "陈广胜 ArchSummit 深圳站演讲整理的多平台转载版本，系统梳理 EventMesh 架构、特性与微众银行落地实践。"
   }
 ];
 
