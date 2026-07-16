@@ -1,25 +1,24 @@
 // ============================================================
-//  数据层：与陈广胜 (Eason Chen / qqeasonchen / chenguangsheng)
-//  相关的公开文章、演讲、采访与开源项目
+//  数据层：与 Eason Chen (qqeasonchen / chenguangsheng) 相关的公开文章、
+//  演讲、采访与开源项目（聚合内容中仍保留 陈广胜 / 微众银行 等原文标注与搜索标签）
 //  全部为可搜索、可聚合的静态数据，部署到 GitHub Pages 无需后端
 // ============================================================
 
 const PROFILE = {
-  nameZh: "陈广胜",
   nameEn: "Eason Chen",
   handle: "qqeasonchen",
   email: "chenguangsheng@apache.org",
-  org: "微众银行 (WeBank)",
+  org: "Apache 开源社区",
   city: "深圳 · 中国",
-  aliases: ["陈广胜", "Eason Chen", "qqeasonchen", "chenguangsheng", "Guangsheng Chen"],
+  aliases: ["Eason Chen", "qqeasonchen", "chenguangsheng", "Guangsheng Chen"],
   titles: [
     "Apache 软件基金会 Member",
     "Apache EventMesh PMC Chair / VP",
     "ALC Shenzhen 联合发起人 & Lead",
-    "微众银行 资深技术专家",
+    "云原生消息 & 事件驱动架构专家",
     "GSoC Mentor · 2023 开源先锋人物"
   ],
-  bio: "2014 年加入微众银行中间件平台团队，主导构建了支撑亿级客户的分布式金融级消息总线 DeFiBus，并由此演化出云原生事件驱动基础设施 Apache EventMesh，带领项目于 2023 年 3 月从 Apache 孵化器毕业成为顶级项目（TLP）。长期深耕消息、云原生微服务、Service Mesh 与 Serverless 领域，并积极在 Apache 社区传播“开源之道”。",
+  bio: "Apache EventMesh 的创始人，带领项目于 2023 年 3 月从 Apache 孵化器毕业成为顶级项目（TLP）。主导构建了支撑亿级客户的分布式金融级消息总线 DeFiBus，并由此演化出云原生事件驱动基础设施 EventMesh。长期深耕消息、云原生微服务、Service Mesh 与 Serverless 领域，并积极在 Apache 社区传播“开源之道”。",
   focus: ["消息中间件", "云原生", "EventMesh", "Service Mesh", "Serverless", "Kubernetes", "微服务架构", "开源治理"]
 };
 
@@ -48,7 +47,7 @@ const PROJECTS = [
   {
     name: "DeFiBus",
     role: "原作者 · 负责人",
-    desc: "微众银行开源的分布式金融级消息总线，支撑亿级客户金融业务与同城多活架构。基于 RocketMQ 深度增强，提供同步/异步/多播、灰度、熔断、多中心多活等金融级特性。",
+    desc: "面向金融级场景的分布式消息总线，支撑亿级客户金融业务与同城多活架构。基于 RocketMQ 深度增强，提供同步/异步/多播、灰度、熔断、多中心多活等金融级特性。",
     tags: ["DeFiBus", "消息总线", "RocketMQ", "金融级"],
     url: "https://github.com/WeBankFinTech/DeFiBus",
     stars: "—"
@@ -56,7 +55,7 @@ const PROJECTS = [
   {
     name: "Apache RocketMQ",
     role: "Committer / Contributor",
-    desc: "分布式消息中间件。作为社区资深 Contributor 参与，并在微众银行消息总线架构演进中基于 RocketMQ 做了大量生产级增强。",
+    desc: "分布式消息中间件。作为社区资深 Contributor 参与，并在大规模分布式消息总线架构演进中基于 RocketMQ 做了大量生产级增强。",
     tags: ["RocketMQ", "消息中间件", "Apache"],
     url: "https://github.com/apache/rocketmq",
     stars: "—"
@@ -73,8 +72,8 @@ const PROJECTS = [
 
 // 演讲 / 活动时间线
 const TIMELINE = [
-  { year: "2018", title: "微众银行金融级消息服务平台建设实践", sub: "腾讯云开发者社区撰文 · RocketMQ 资深 Contributor", tag: "文章" },
-  { year: "2018", title: "Apache RocketMQ Meetup 深圳", sub: "微众银行消息总线的架构演进", tag: "演讲" },
+  { year: "2018", title: "金融级消息服务平台建设实践", sub: "腾讯云开发者社区撰文 · RocketMQ 资深 Contributor", tag: "文章" },
+  { year: "2018", title: "Apache RocketMQ Meetup 深圳", sub: "消息总线的架构演进", tag: "演讲" },
   { year: "2021.02", title: "EventMesh 进入 Apache 孵化器", sub: "国内金融行业首个 ASF 孵化项目", tag: "里程碑" },
   { year: "2021.08", title: "ApacheCon Asia 2021", sub: "EventMesh: 事件驱动分布式应用运行时", tag: "演讲" },
   { year: "2021.11", title: "ArchSummit 全球架构师峰会（深圳）", sub: "分布式应用提效框架 Apache EventMesh", tag: "演讲" },
@@ -275,7 +274,7 @@ const ARTICLES = [
     date: "2023",
     type: "一手记录",
     tags: ["Eason Chen", "EventMesh", "Apache", "PMC Chair", "官方"],
-    excerpt: "作为 PMC Chair，Eason Chen 向 ASF 董事会持续提交 EventMesh 项目季度报告，记录社区成员变化、版本发布与社区健康度。"
+    excerpt: "作为 PMC Chair，Eason Chen 向 ASF 董事会持续提交 EventMesh 项目季度报告（2023–2025），记录社区成员变化、版本发布与社区健康度；最新季度披露 EventMesh 正面向 AI Agent 与 Workflow 特性进行设计。"
   },
   {
     title: "CommunityOverCode Asia 2023 参会记（提及与陈广胜合照）",
@@ -303,6 +302,51 @@ const ARTICLES = [
     type: "演讲整理",
     tags: ["陈广胜", "微众银行", "EventMesh", "Apache", "云原生", "演讲"],
     excerpt: "陈广胜 ArchSummit 深圳站演讲整理的多平台转载版本，系统梳理 EventMesh 架构、特性与微众银行落地实践。"
+  },
+  {
+    title: "Apache EventMesh 毕业为 Apache 顶级项目（ASF 官方博客）",
+    source: "The Apache Software Foundation Blog",
+    url: "https://news.apache.org/?p=4931",
+    date: "2023-03-15",
+    type: "官方新闻",
+    tags: ["Eason Chen", "EventMesh", "Apache", "Serverless", "新闻", "官方"],
+    excerpt: "ASF 官方博客正式公告 EventMesh 从孵化器毕业成为顶级项目（TLP）。Eason Chen 以 Apache EventMesh Vice President 身份发言，回顾社区从孵化到毕业的成长与“The Apache Way”。"
+  },
+  {
+    title: "COSCon'20｜利用云原生事件网格构建混合微服务策略",
+    source: "HelloWorld / COSCon 中国开源年会",
+    url: "https://helloworld.net/p/3871384781",
+    date: "2020-10",
+    type: "演讲",
+    tags: ["陈广胜", "EventMesh", "云原生", "Service Mesh", "微服务", "演讲"],
+    excerpt: "在 COSCon'20 云原生与微服务专场，陈广胜分享什么是云原生事件网格，以及为什么企业有了服务网格（Service Mesh）还需要事件网格（Event Mesh）。"
+  },
+  {
+    title: "微众银行和一代人的“开源武林”（人物特写）",
+    source: "长亭科技 Chaitin",
+    url: "https://rivers.chaitin.cn/blog/cq95ak10lnechd2456l0",
+    date: "2023",
+    type: "人物特写",
+    tags: ["陈广胜", "EventMesh", "开源", "ALC", "ASF Member", "文章"],
+    excerpt: "深度人物特写：从 EventMesh 到发起 ALC Shenzhen 城市社区，再到 2023 年当选 ASF Member（华人第 55 位），记录陈广胜“人狠话又多”的开源进阶之路与开源方法论。"
+  },
+  {
+    title: "EventMesh Function：面向事件流处理的 Serverless 新火花（报告）",
+    source: "发现报告 fxbaogao",
+    url: "https://fxbaogao.com/detail/4642544",
+    date: "2023",
+    type: "演讲",
+    tags: ["陈广胜", "EventMesh", "Serverless", "演讲"],
+    excerpt: "陈广胜 EventMesh Function 演讲的图文报告：事件分类体系、在金融级消息总线与华为云事件网格中的落地实践、信创支持与应用规模。"
+  },
+  {
+    title: "EventMesh A2A：面向 AI Agent 的协作总线",
+    source: "Apache EventMesh 文档",
+    url: "https://apache.googlesource.com/eventmesh/+/68ed2835d040f91362eb005810f1beb9363e2dd5%5E%21/",
+    date: "2025",
+    type: "技术文档",
+    tags: ["Eason Chen", "EventMesh", "AI Agent", "A2A", "MCP", "云原生"],
+    excerpt: "EventMesh v2.0 拥抱 MCP / A2A 协议，从事件中间件演进为 AI Agent 协作总线（Agent Collaboration Bus），基于 CloudEvents 实现异步 RPC over JSON-RPC 2.0，并可与 LangChain / AutoGen 集成。"
   }
 ];
 
