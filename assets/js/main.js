@@ -83,10 +83,10 @@
   /* ---------- 渲染：HERO 统计 ---------- */
   (function () {
     const stats = [
-      { n: D.ARTICLES.length, l: "聚合文章 / 演讲" },
-      { n: D.PROJECTS.length, l: "核心开源项目" },
-      { n: "TLP", l: "EventMesh 顶级项目" },
-      { n: "ASF", l: "基金会 Member" }
+      { n: D.ARTICLES.length, l: "文章 / 演讲" },
+      { n: D.PATENTS.length, l: "授权 / 申请专利" },
+      { n: D.AWARDS.length, l: "荣誉 / 奖项" },
+      { n: D.PROJECTS.length, l: "核心开源项目" }
     ];
     $("#hero-stats").innerHTML = stats.map((s) =>
       `<div class="hstat"><b>${esc(String(s.n))}</b>${esc(s.l)}</div>`).join("");
@@ -117,25 +117,62 @@
       <span class="cl-sub">${esc(l.sub)}</span>
     </a>`).join("");
 
-  /* ---------- 知识库搜索 ---------- */
+  /* ---------- 知识库：分类 + 列表 + 搜索 ---------- */
   const searchEl = $("#search");
-  const gridEl = $("#kb-grid");
+  const listEl = $("#kb-grid");
   const countEl = $("#kb-count");
   const emptyEl = $("#kb-empty");
   const chipsEl = $("#chips");
+  const catsEl = $("#kb-cats");
   const filtersEl = $("#kb-filters");
 
   // 快捷搜索 chip（用户明确要求可搜的关键词）
   const QUICK = ["微众银行", "陈广胜", "chenguangsheng", "qqeasonchen", "EventMesh", "DeFiBus", "开源", "Serverless"];
   let activeQuick = "";
+  let activeCat = "全部";
   let activeFilter = "";
 
   chipsEl.innerHTML = QUICK.map((q) => `<button class="chip" data-q="${esc(q)}">${esc(q)}</button>`).join("");
 
-  // 自动从文章标签里提取高频筛选标签
+  // 文章按 type 归并为大类
+  const CAT_GROUPS = {
+    "文章": ["文章", "技术文章", "人物特写", "项目推介", "案例", "参会随笔"],
+    "演讲": ["演讲", "演讲整理", "主题演讲", "活动", "大会回顾"],
+    "视频": ["视频"],
+    "新闻": ["新闻", "官方新闻"],
+    "官方": ["官方", "一手记录", "技术文档"],
+    "仓库": ["仓库"]
+  };
+  function catOf(a) {
+    if (a.__kind === "patent") return "专利";
+    if (a.__kind === "award") return "荣誉";
+    for (const [cat, types] of Object.entries(CAT_GROUPS)) {
+      if (types.includes(a.type)) return cat;
+    }
+    return "其他";
+  }
+
+  // 统一数据：文章 / 专利 / 获奖
+  const allItems = [
+    ...D.ARTICLES.map((a) => ({ ...a, __kind: "article" })),
+    ...D.PATENTS.map((p) => ({ ...p, __kind: "patent" })),
+    ...D.AWARDS.map((a) => ({ ...a, __kind: "award" }))
+  ];
+  allItems.forEach((it) => (it.__cat = catOf(it)));
+
+  // 分类标签：全部 + 有内容的分类（按固定顺序）
+  const catOrder = ["文章", "演讲", "视频", "新闻", "官方", "仓库", "专利", "荣誉", "其他"];
+  const present = {};
+  allItems.forEach((it) => (present[it.__cat] = (present[it.__cat] || 0) + 1));
+  const cats = ["全部", ...catOrder.filter((c) => present[c])];
+  catsEl.innerHTML = cats.map((c) =>
+    `<button class="cat ${c === activeCat ? "active" : ""}" data-c="${esc(c)}">${esc(c)}${c === "全部" ? "" : ` <i>${present[c]}</i>`}</button>`
+  ).join("");
+
+  // 高频标签筛选（辅助）
   const tagCount = {};
   D.ARTICLES.forEach((a) => a.tags.forEach((t) => (tagCount[t] = (tagCount[t] || 0) + 1)));
-  const topTags = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).slice(0, 12).map((e) => e[0]);
+  const topTags = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).slice(0, 10).map((e) => e[0]);
   filtersEl.innerHTML = topTags.map((t) => `<button class="fchip" data-t="${esc(t)}">${esc(t)}</button>`).join("");
 
   function highlight(text, q) {
@@ -147,37 +184,80 @@
     } catch (e) { return safe; }
   }
 
+  function haystack(it) {
+    if (it.__kind === "patent") {
+      return (it.title + " " + it.number + " " + it.inventors + " " + it.assignee + " " + it.status + " " + it.abstract + " 专利").toLowerCase();
+    }
+    if (it.__kind === "award") {
+      return (it.title + " " + it.org + " " + it.desc + " 获奖 荣誉").toLowerCase();
+    }
+    return (it.title + " " + it.source + " " + it.excerpt + " " + it.tags.join(" ") + " " + it.type).toLowerCase();
+  }
+
   function render() {
     const q = (searchEl.value || "").trim().toLowerCase();
-    const list = D.ARTICLES.filter((a) => {
-      const hay = (a.title + " " + a.source + " " + a.excerpt + " " + a.tags.join(" ") + " " + a.type).toLowerCase();
-      const matchQ = !q || hay.includes(q);
-      const matchF = !activeFilter || a.tags.includes(activeFilter);
-      const matchQuick = !activeQuick || (a.title + a.tags.join(" ")).toLowerCase().includes(activeQuick.toLowerCase());
-      return matchQ && matchF && matchQuick;
+    const list = allItems.filter((it) => {
+      const matchQ = !q || haystack(it).includes(q);
+      const matchC = activeCat === "全部" || it.__cat === activeCat;
+      const matchF = !activeFilter || (it.__kind === "article" && it.tags.includes(activeFilter));
+      const matchQuick = !activeQuick || haystack(it).includes(activeQuick.toLowerCase());
+      return matchQ && matchC && matchF && matchQuick;
     });
 
-    countEl.textContent = `▸ 命中 ${list.length} / ${D.ARTICLES.length} 条` + (q ? ` · 关键词「${q}」` : "");
+    countEl.textContent = `▸ 命中 ${list.length} / ${allItems.length} 条`
+      + (q ? ` · 关键词「${q}」` : "")
+      + (activeCat !== "全部" ? ` · 分类「${activeCat}」` : "");
 
     if (!list.length) {
-      gridEl.innerHTML = "";
+      listEl.innerHTML = "";
       emptyEl.hidden = false;
       return;
     }
     emptyEl.hidden = true;
-    gridEl.innerHTML = list.map((a) => `
-      <a class="kcard" href="${esc(a.url)}" target="_blank" rel="noopener">
-        <span class="ktype">${esc(a.type)}</span>
-        <h3>${highlight(a.title, q)}</h3>
-        <div class="ksrc">${highlight(a.source, q)}</div>
-        <div class="kex">${highlight(a.excerpt, q)}</div>
-        <div class="ktags">${a.tags.map((t) => `<span class="ktag ${activeFilter === t || q && t.toLowerCase().includes(q) ? "hl" : ""}">${esc(t)}</span>`).join("")}</div>
-        <div class="kfoot"><span class="kdate">${esc(a.date)}</span><span class="kgo">阅读原文 →</span></div>
-      </a>`).join("");
+    listEl.innerHTML = list.map((it) => {
+      if (it.__kind === "patent") {
+        return `<a class="krow krow-patent" href="${esc(it.url)}" target="_blank" rel="noopener">
+          <span class="ktype">专利</span>
+          <div class="kbody">
+            <div class="kt">${highlight(it.title, q)} <span class="kpat">${esc(it.number)}</span></div>
+            <div class="kmeta">${esc(it.inventors)} · ${esc(it.date)} · <b>${esc(it.status)}</b></div>
+            <div class="kex">${highlight(it.abstract, q)}</div>
+          </div>
+          <span class="kgo">↗</span>
+        </a>`;
+      }
+      if (it.__kind === "award") {
+        return `<a class="krow krow-award" href="${esc(it.url)}" target="_blank" rel="noopener">
+          <span class="ktype">荣誉</span>
+          <div class="kbody">
+            <div class="kt">${highlight(it.title, q)}</div>
+            <div class="kmeta">${esc(it.org)} · ${esc(it.date)}</div>
+            <div class="kex">${highlight(it.desc, q)}</div>
+          </div>
+          <span class="kgo">↗</span>
+        </a>`;
+      }
+      return `<a class="krow" href="${esc(it.url)}" target="_blank" rel="noopener">
+        <span class="ktype">${esc(it.type)}</span>
+        <div class="kbody">
+          <div class="kt">${highlight(it.title, q)}</div>
+          <div class="kmeta">${highlight(it.source, q)} · ${esc(it.date)}</div>
+          <div class="kex">${highlight(it.excerpt, q)}</div>
+          <div class="ktags">${it.tags.slice(0, 6).map((t) => `<span class="ktag ${activeFilter === t || (q && t.toLowerCase().includes(q)) ? "hl" : ""}">${esc(t)}</span>`).join("")}</div>
+        </div>
+        <span class="kgo">↗</span>
+      </a>`;
+    }).join("");
   }
 
   // 事件
   searchEl.addEventListener("input", render);
+  catsEl.addEventListener("click", (e) => {
+    const b = e.target.closest(".cat"); if (!b) return;
+    activeCat = b.dataset.c;
+    $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === activeCat));
+    render();
+  });
   chipsEl.addEventListener("click", (e) => {
     const b = e.target.closest(".chip"); if (!b) return;
     const q = b.dataset.q;
@@ -195,18 +275,20 @@
     render();
   });
   $("#kb-clear").addEventListener("click", () => {
-    searchEl.value = ""; activeQuick = ""; activeFilter = "";
+    searchEl.value = ""; activeQuick = ""; activeFilter = ""; activeCat = "全部";
     $$(".chip", chipsEl).forEach((c) => c.classList.remove("active"));
     $$(".fchip", filtersEl).forEach((c) => c.classList.remove("active"));
+    $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === "全部"));
     render();
   });
   // 别名点击 → 搜索
   $("#alias-list").addEventListener("click", (e) => {
     const b = e.target.closest(".alias"); if (!b) return;
     searchEl.value = b.dataset.q;
-    activeQuick = ""; activeFilter = "";
+    activeQuick = ""; activeFilter = ""; activeCat = "全部";
     $$(".chip", chipsEl).forEach((c) => c.classList.remove("active"));
     $$(".fchip", filtersEl).forEach((c) => c.classList.remove("active"));
+    $$(".cat", catsEl).forEach((c) => c.classList.toggle("active", c.dataset.c === "全部"));
     render();
     $("#knowledge").scrollIntoView({ behavior: "smooth" });
   });

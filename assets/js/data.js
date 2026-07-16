@@ -407,6 +407,126 @@ const ARTICLES = [
   }
 ];
 
+// 专利（陈广胜 作为共同发明人，专利权人均为深圳前海微众银行股份有限公司）
+const PATENTS = [
+  {
+    title: "建立消息队列的方法和装置",
+    number: "CN106453136A",
+    date: "2016 申请 · 2019 授权",
+    inventors: "陈广胜；贾立华；范瑞彬",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "根据待处理消息的业务类型确定传输方式（同步/异步），在消息中间件中建立对应的消息队列，控制分布式系统中发送端与接收端之间消息的调用关系。",
+    url: "https://patentimages.storage.googleapis.com/88/de/e1/1e95232e3aab23/CN106453136A.pdf"
+  },
+  {
+    title: "基于消息中间件的服务切换方法及装置",
+    number: "CN106375447A",
+    date: "2016 申请 · 2017 公布",
+    inventors: "陈广胜；贾立华；范瑞彬",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利",
+    abstract: "在接收端异常时，关闭第一发送端消息队列出入口并开启第二发送端，将请求消息路由至第二消息队列，消除接收端与发送端之间的耦合关系，实现服务无感切换。",
+    url: "https://patentimages.storage.googleapis.com/82/b2/c1/b964a8e38ff66f/CN106375447A.pdf"
+  },
+  {
+    title: "日志管理方法、系统以及计算机可读存储介质",
+    number: "CN107622084A",
+    date: "2017 申请 · 2018 公布",
+    inventors: "卢道和；杨军；陈广胜；陈翼",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利",
+    abstract: "将各业务系统日志统一存储至消息中间件集群并分类建立索引，业务系统可直接在日志管理系统中按索引获取所需日志，无需跨多个系统拉取。",
+    url: "https://patents.qizhidao.com/zhuanli/WZIP_a1963d3f56193f618d27b9d31c0f49ac.html"
+  },
+  {
+    title: "日志查询方法、装置、设备及计算机可读存储介质（PCT）",
+    number: "WO2021057383A1",
+    date: "2020 申请 · 2021 PCT 公布",
+    inventors: "卢道和；杨军；陈广胜；陈翼",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "国际专利 (PCT)",
+    abstract: "基于日志查询请求获取第一查询维度，从日志管理系统中检索对应维度的日志，提升分布式金融系统日志查询效率。本专利为 CN107622084A 的 PCT 国际申请。",
+    url: "https://patentimages.storage.googleapis.com/8c/b9/e4/95bad2c48b086e/WO2021057383A1.pdf"
+  },
+  {
+    title: "应用多活方法、设备、数据中心集群及可读存储介质",
+    number: "CN109542659A",
+    date: "2018 申请 · 2019 公布",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利",
+    abstract: "监测数据中心流量节点（应用实例/消息中间件）是否宕机，若存在异常则将待传入流量切换至其他数据中心的应用实例处理，避免应用单活导致的业务中断。",
+    url: "https://patentimages.storage.googleapis.com/36/d0/77/d3854d616469d8/CN109542659A.pdf"
+  },
+  {
+    title: "消息鉴权方法、设备、系统及计算机可读存储介质",
+    number: "CN109413040A / CN109413040B",
+    date: "2018 申请 · 2019 公布",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁炜强",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权 (B)",
+    abstract: "面向消息中间件的鉴权方案，对发送端与接收端之间的消息通信进行身份认证与权限校验，保障金融级消息传输的安全性与合规性。",
+    url: "http://patents.google.com/patent/CN109413040A/zh"
+  },
+  {
+    title: "一种消息校验方法及第一设备",
+    number: "CN113986578A",
+    date: "2021 申请 · 2022 公布",
+    inventors: "卢道和；杨军；陈广胜；贺繁",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利申请",
+    abstract: "基于设备标识获取身份令牌组（先序/后序令牌），依序生成第二身份签名并与第一设备签名比对，规避身份令牌易盗用风险，减少令牌不同步导致的消息传输失败。",
+    url: "https://patentimages-storage-googleapis-comproxy.c9w.net/50/d2/a9/dfe37a9a6ef4d3/CN113986578A.pdf"
+  }
+];
+
+// 获奖 / 荣誉 / 社区身份
+const AWARDS = [
+  {
+    title: "2023 OSCAR 尖峰开源人物（开源先锋人物）",
+    org: "OSCAR 开源先锋人物评选",
+    date: "2023",
+    desc: "由 InfoQ 充电计划嘉宾介绍确认为「2023 Oscar 尖峰开源人物」，表彰其在 Apache EventMesh 与 ALC Shenzhen 上的开源贡献。",
+    url: "https://applet.10100.com/article/54800296"
+  },
+  {
+    title: "当选 Apache 软件基金会 Member（第 55 位华人）",
+    org: "Apache Software Foundation",
+    date: "2023",
+    desc: "因在 EventMesh 与 ALC 上的积极贡献，2023 年正式被选举为 ASF Member，华人 Member 数量达 55 名。",
+    url: "https://blog.csdn.net/kaiyuanshe/article/details/131733603"
+  },
+  {
+    title: "Apache EventMesh PMC Chair / Vice President",
+    org: "Apache 软件基金会",
+    date: "2021 – 至今",
+    desc: "作为 EventMesh 创始人，带领项目从孵化器毕业为 Apache 顶级项目（TLP），并担任 PMC Chair / VP。",
+    url: "https://eventmesh.apache.org/zh/team"
+  },
+  {
+    title: "Google 编程之夏（GSoC）导师",
+    org: "Google Open Source",
+    date: "—",
+    desc: "以 Mentor 身份参与 GSoC，指导全球学生贡献者在 EventMesh 等开源项目中完成代码贡献。",
+    url: "https://summerofcode.withgoogle.com/"
+  },
+  {
+    title: "ALC Shenzhen 联合发起人 & Lead",
+    org: "Apache Local Community",
+    date: "2022 – 至今",
+    desc: "发起建立 ALC（Apache Local Community）Shenzhen 城市社区，集结粤港澳大湾区开源力量，扶持本地项目走上「阿帕奇之路」。",
+    url: "https://www.slidestalk.cn/LooK/202246398"
+  },
+  {
+    title: "Apache RocketMQ Committer · Linux OpenMessaging TSC",
+    org: "Apache / Linux Foundation",
+    date: "—",
+    desc: "Apache RocketMQ 提交者，参与社区分支维护；Linux OpenMessaging 技术标准化委员会（TSC）成员，推动消息与流处理开放标准。",
+    url: "https://github.com/apache/rocketmq"
+  }
+];
+
 // 对外链接
 const LINKS = [
   { label: "GitHub", sub: "@qqeasonchen", url: "https://github.com/qqeasonchen" },
@@ -416,4 +536,4 @@ const LINKS = [
 ];
 
 // 暴露到全局
-window.SITE_DATA = { PROFILE, BADGES, PROJECTS, ARTICLES, LINKS };
+window.SITE_DATA = { PROFILE, BADGES, PROJECTS, ARTICLES, PATENTS, AWARDS, LINKS };
