@@ -3,6 +3,7 @@
    ============================================================ */
 (function () {
   "use strict";
+  document.body.classList.add("js-loaded");   // 标记 JS 已执行，启用 reveal 动画
   const D = window.SITE_DATA;
   if (!D) return;
 
@@ -108,15 +109,6 @@
       <div class="ptags">${p.tags.map((t) => `<span class="ktag">${esc(t)}</span>`).join("")}</div>
       <span class="pgo">查看项目 →</span>
     </a>`).join("");
-
-  /* ---------- 渲染：TIMELINE ---------- */
-  $("#timeline-list").innerHTML = D.TIMELINE.map((t) => `
-    <div class="tl-item">
-      <div class="tl-year">${esc(t.year)}</div>
-      <div class="tl-title">${esc(t.title)}</div>
-      <div class="tl-sub">${esc(t.sub)}</div>
-      <span class="tl-tag">${esc(t.tag)}</span>
-    </div>`).join("");
 
   /* ---------- 渲染：CTA LINKS ---------- */
   $("#cta-links").innerHTML = D.LINKS.map((l) => `

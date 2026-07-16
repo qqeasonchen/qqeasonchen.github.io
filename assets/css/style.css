@@ -295,8 +295,10 @@ mark { background: rgba(34,211,238,.28); color: #fff; border-radius: 3px; paddin
 .footer-meta { font-family: var(--font-mono); }
 
 /* ---------- 滚动揭示动画 ---------- */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-.reveal.in { opacity: 1; transform: none; }
+/* 安全策略：opacity 始终为 1（不依赖 IO），仅用 transform 做位移动画 */
+body:not(.js-loaded) .reveal { transform: none !important; }
+.reveal { opacity: 1; transform: translateY(16px); transition: opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { transform: none; }
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 880px) {
