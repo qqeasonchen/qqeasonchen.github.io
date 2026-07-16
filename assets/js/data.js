@@ -518,7 +518,7 @@ const AWARDS = [
     org: "中国人民银行（微众银行「鲲鹏芯片在银行应用」项目）",
     date: "2020",
     desc: "微众银行凭借「鲲鹏芯片在银行应用」项目（全分布式银行系统架构 / 同城多中心多活）荣获中国人民银行 2019 年度银行科技发展奖一等奖——银行领域唯一的部级奖励。Eason Chen 作为微众银行核心技术人员，其主导的同城多活、消息总线（DeFiBus）与金融级消息中间件相关专利是本获奖架构的关键技术底座。",
-    url: "https://m.thepaper.cn/newsdetail_forward_9359561"
+    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vWIk%2bMkvzkwandkAQBM1ZpRgccZI6LB2px6QR/sLXj%2bY="
   },
   {
     title: "中国人民银行银行科技发展奖 — 安全可控的分布式金融级消息总线",
@@ -532,7 +532,14 @@ const AWARDS = [
     org: "中国银保监会（微众银行）",
     date: "2018",
     desc: "微众银行「基于分布式架构的同城三中心多活研究与实践」课题从两百余项参选课题中脱颖而出，荣获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。Eason Chen（陈广胜）作为同城多活与消息总线相关专利的发明人，是该多活架构落地的核心技术人员之一；课题实现同城 RPO=0、RTO≈0。",
-    url: "https://www.thepaper.cn/newsDetail_forward_2916845"
+    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
+  },
+  {
+    title: "微众银行基于自主可控技术的分布式架构（国家科技成果）",
+    org: "国家科技成果 · 深圳前海微众银行",
+    date: "2015–2016",
+    desc: "微众银行「基于自主可控技术的分布式架构」入选国家科技成果库，是中国银行业首个全面采用 X86 服务器 + 开源技术 + 分布式架构承载全行核心业务的银行架构，摆脱对西方商业化技术的依赖。该架构获《金融电子化》杂志社「2015 年金融信息化十大事件」、2015 年度亚洲互联网银行科技创新大奖、2015 年南都金砖奖—最佳互联网金融创新奖、2016 年首届互联网金融大奖（金融机构组金奖）等多项荣誉。Eason Chen（陈广胜）在微众早期主导的消息总线（DeFiBus）与同城多活相关专利，正是构建于这一自主可控分布式架构之上。",
+    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vpHbkdm25p9B6RCsq%2bfXI0B8UHWkeeaZuaVhEZ5xGfdE="
   },
   {
     title: "2023 OSCAR 尖峰开源人物（开源先锋人物）",
