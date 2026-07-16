@@ -478,11 +478,48 @@ const PATENTS = [
     status: "发明专利申请",
     abstract: "基于设备标识获取身份令牌组（先序/后序令牌），依序生成第二身份签名并与第一设备签名比对，规避身份令牌易盗用风险，减少令牌不同步导致的消息传输失败。",
     url: "https://patentimages-storage-googleapis-comproxy.c9w.net/50/d2/a9/dfe37a9a6ef4d3/CN113986578A.pdf"
+  },
+  {
+    title: "一种断开连接的方法及装置",
+    number: "CN112866383B",
+    date: "2021 申请 · 2026 授权",
+    inventors: "卢道和；杨军；陈广胜；熊梦飞；梁荣华；贺繁",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "已授权",
+    abstract: "中间方接收请求方的断开连接请求，依据各交互方收发记录确定第一收发记录的收发数是否符合设定条件，符合则允许断开，保证交互方断开连接时信息不丢失，提升中间方稳定性。",
+    url: "https://m.tianyancha.com/zhuanli/ee0db7ba41eb72b79c195cd1b22c277a"
+  },
+  {
+    title: "日志查询方法、装置、设备及计算机可读存储介质",
+    number: "CN110659349A",
+    date: "2019 申请 · 2020 公布",
+    inventors: "卢道和；杨军；陈广胜；陈翼",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "发明专利",
+    abstract: "接收日志查询请求后按第一查询维度调用预设数据接口查询日志数据库，生成日志查询页面并响应用户操作，提升分布式金融系统日志查询的便捷性。",
+    url: "https://www.chatm.com/zldetail/2417917028c84c003963a9ebf87941021f29afe917767a768abb925cd0d956ec.html"
+  },
+  {
+    title: "消息中间件的资源访问方法、服务器及资源访问系统",
+    number: "CN105491065A",
+    date: "2015 申请 · 2019 驳回",
+    inventors: "贾立华；陈井波；陈广胜；周仁丹",
+    assignee: "深圳前海微众银行股份有限公司",
+    status: "驳回（未授权）",
+    abstract: "依据应用系统指定的 VPN 名称建立对应连接，使应用系统访问消息中间件中对应 VPN 名称的静态资源，解决消息中间件内部资源隔离问题，避免依赖第三方权限控制。",
+    url: "https://m.tianyancha.com/zhuanli/13c460dea09f4550a736ba912858ed7a"
   }
 ];
 
 // 获奖 / 荣誉 / 社区身份
 const AWARDS = [
+  {
+    title: "中国人民银行 2019 年度银行科技发展奖 一等奖",
+    org: "中国人民银行（微众银行「鲲鹏芯片在银行应用」项目）",
+    date: "2020",
+    desc: "微众银行凭借「鲲鹏芯片在银行应用」项目（全分布式银行系统架构 / 同城多中心多活）荣获中国人民银行 2019 年度银行科技发展奖一等奖——银行领域唯一的部级奖励。Eason Chen 作为微众银行核心技术人员，其主导的同城多活、消息总线（DeFiBus）与金融级消息中间件相关专利是本获奖架构的关键技术底座。",
+    url: "https://m.thepaper.cn/newsdetail_forward_9359561"
+  },
   {
     title: "2023 OSCAR 尖峰开源人物（开源先锋人物）",
     org: "OSCAR 开源先锋人物评选",
