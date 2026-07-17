@@ -754,7 +754,7 @@ const AWARDS = [
     org: "中国人民银行（微众银行）",
     date: "—",
     desc: "微众银行「基于分布式架构的同城多中心多活架构」成果荣获中国人民银行银行科技发展奖。CNKI 国家科技成果库确认陈广胜位列成果完成人之一，与马智涛、卢道和、杨军等 17 人共同完成；研究期 2016–2018，在两地三中心基础上实现同城任一数据中心故障不影响业务，达成同城 RPO=0、RTO≈0，是银行级高可用的标杆实践。该成果同期还获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。",
-    url: "https://www.financialnews.com.cn/yh/sd/201901/t20190129_153918.html",
+    url: "https://www.techsir.com/a/202109/74212.html",
     source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
   },
   {
@@ -766,10 +766,10 @@ const AWARDS = [
     source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
   },
   {
-    title: "中国人民银行 2019 年度银行科技发展奖 · 微众银行基于自主可控技术的分布式架构",
+    title: "中国人民银行 2015 年度银行科技发展奖 · 微众银行基于自主可控技术的分布式架构",
     org: "中国人民银行（微众银行）",
-    date: "2019–2020",
-    desc: "微众银行「基于自主可控技术的分布式架构」是 2019 年度银行科技发展奖一等奖项目「鲲鹏芯片在银行应用」的核心技术底座，荣获中国人民银行银行科技发展奖。该架构是中国银行业首个全面采用 X86 服务器 + 开源技术 + 分布式架构承载全行核心业务的银行架构，摆脱对西方商业化技术的依赖。基于 MySQL 的分布式数据库集群单集群超 5000 QPS，存款核心系统支付处理能力超 6000 TPS。该架构获《金融电子化》杂志社「2015 年金融信息化十大事件」、2015 年度亚洲互联网银行科技创新大奖、2015 年南都金砖奖—最佳互联网金融创新奖、2016 年首届互联网金融大奖（金融机构组金奖）等多项荣誉。Eason Chen（陈广胜）在微众早期主导的消息总线（DeFiBus）与同城多活相关专利，正是构建于这一自主可控分布式架构之上（注：该成果完成人名单未含陈广胜，但其专利成果支撑了同一技术体系）。",
+    date: "2015",
+    desc: "微众银行「基于自主可控技术的分布式架构」荣获中国人民银行 2015 年度银行科技发展奖。该架构是中国银行业首个全面采用 X86 服务器 + 开源技术 + 分布式架构承载全行核心业务的银行架构，摆脱对西方商业化技术的依赖。基于 MySQL 的分布式数据库集群单集群超 5000 QPS，存款核心系统支付处理能力超 6000 TPS。该架构还入选《金融电子化》杂志社「2015 年金融信息化十大事件」、获 2015 年度亚洲互联网银行科技创新大奖、2015 年南都金砖奖—最佳互联网金融创新奖、2016 年首届互联网金融大奖（金融机构组金奖）等荣誉。Eason Chen（陈广胜）在微众早期主导的消息总线（DeFiBus）与同城多活相关专利，正是构建于这一自主可控分布式架构之上（注：该成果完成人名单未含陈广胜，但其专利成果支撑了同一技术体系）。",
     url: "https://finance.sina.cn/bank/yhgd/2021-04-02/detail-ikmxzfmk1071249.d.html",
     source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vpHbkdm25p9B6RCsq%2bfXI0B8UHWkeeaZuaVhEZ5xGfdE="
   },
