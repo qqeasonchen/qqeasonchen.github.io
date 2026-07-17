@@ -217,15 +217,19 @@
         </a>`;
       }
       if (it.__kind === "award") {
-        return `<a class="krow krow-award" href="${esc(it.url)}" target="_blank" rel="noopener">
-          <span class="ktype">荣誉</span>
-          <div class="kbody">
-            <div class="kt">${highlight(it.title, q)}</div>
-            <div class="kmeta">${esc(it.org)} · ${esc(it.date)}</div>
-            <div class="kex">${highlight(it.desc, q)}</div>
-          </div>
-          <span class="kgo">↗</span>
-        </a>`;
+        const src = it.source ? `<a class="ksrc" href="${esc(it.source)}" target="_blank" rel="noopener">国家科技成果库 ↗</a>` : "";
+        return `<div class="krow-wrap">
+          <a class="krow krow-award" href="${esc(it.url)}" target="_blank" rel="noopener">
+            <span class="ktype">荣誉</span>
+            <div class="kbody">
+              <div class="kt">${highlight(it.title, q)}</div>
+              <div class="kmeta">${esc(it.org)} · ${esc(it.date)}</div>
+              <div class="kex">${highlight(it.desc, q)}</div>
+            </div>
+            <span class="kgo">↗</span>
+          </a>
+          ${src}
+        </div>`;
       }
       return `<a class="krow" href="${esc(it.url)}" target="_blank" rel="noopener">
         <span class="ktype">${esc(it.type)}</span>

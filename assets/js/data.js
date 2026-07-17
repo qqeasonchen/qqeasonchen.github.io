@@ -738,35 +738,40 @@ const AWARDS = [
     org: "中国人民银行（微众银行「鲲鹏芯片在银行应用」项目）",
     date: "2020",
     desc: "微众银行「基于国产化芯片（华为 ARM 泰山 / 鲲鹏服务器）的银行落地应用」项目荣获中国人民银行 2019 年度银行科技发展奖一等奖——银行领域唯一的部级奖励。项目于 2018 年下半年启动验证，年底将国产 ARM 服务器成功投产至重要业务系统灾备环境，首次把国产 CPU 底层资源用于银行核心系统，突破对 X86 架构的严重依赖，并通过统一资源管理平台解决 X86 与 ARM 混合部署的跨平台难题。Eason Chen（陈广胜）相关的消息总线（DeFiBus）与同城多活专利，正构建于这一自主可控硬件底座之上。",
-    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vWIk%2bMkvzkwandkAQBM1ZpRgccZI6LB2px6QR/sLXj%2bY="
+    url: "https://finance.people.com.cn/n1/2020/0925/c1004-31875393.html",
+    source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vWIk%2bMkvzkwandkAQBM1ZpRgccZI6LB2px6QR/sLXj%2bY="
   },
   {
     title: "中国人民银行银行科技发展奖 — 安全可控的分布式金融级消息总线",
     org: "中国人民银行（微众银行）",
     date: "—",
     desc: "微众银行「安全可控的分布式金融级消息总线」项目荣获中国人民银行银行科技发展奖，成果水平国内领先（研究期 2015–2018，2020 年入库国家科技成果）。Eason Chen（陈广胜）位列成果完成人（第 5 完成人），与马智涛、卢道和、杨军等 21 人共同完成。消息总线支持同步 / 异步 / 多播 / 广播与多中心多活自动切换，具备故障自动隔离、熔断限流与逐台灰度发布能力，实现同城 RPO=0、RTO≈0，是 DeFiBus 消息总线的获奖技术底座。",
-    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08v9PVPaXtMCZQ%2bBL33DJH3D5t1DI0vULnXe3WhIqfIpsA="
+    url: "https://www.bfia.org.cn/sites/home/MsgView.jsp?msgId=28277",
+    source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08v9PVPaXtMCZQ%2bBL33DJH3D5t1DI0vULnXe3WhIqfIpsA="
   },
   {
     title: "中国人民银行银行科技发展奖 · 基于分布式架构的同城多中心多活架构",
     org: "中国人民银行（微众银行）",
     date: "—",
     desc: "微众银行「基于分布式架构的同城多中心多活架构」成果荣获中国人民银行银行科技发展奖。CNKI 国家科技成果库确认陈广胜位列成果完成人之一，与马智涛、卢道和、杨军等 17 人共同完成；研究期 2016–2018，在两地三中心基础上实现同城任一数据中心故障不影响业务，达成同城 RPO=0、RTO≈0，是银行级高可用的标杆实践。该成果同期还获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。",
-    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
+    url: "https://www.financialnews.com.cn/yh/sd/201901/t20190129_153918.html",
+    source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
   },
   {
     title: "银行机构科技风险管理研究一类成果奖 · 基于分布式架构的同城三中心多活研究与实践",
     org: "中国银保监会（微众银行）",
     date: "2018",
     desc: "微众银行课题「基于分布式架构的同城三中心多活研究与实践」从两百余项参选课题中脱颖而出，荣获中国银保监会 2018 年度银行业信息科技风险管理课题研究成果「一类成果奖」（部级）。这是与「中国人民银行银行科技发展奖」并列、但颁发主体不同的另一项部级科技奖。对应成果「基于分布式架构的同城多中心多活架构」亦获央行银行科技发展奖，陈广胜为成果完成人之一。",
-    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
+    url: "https://www.thepaper.cn/newsDetail_forward_2916845",
+    source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vemBzq99SYDkYvQqe5kETf5vBAA0Np00q%2blszuko%2btFw="
   },
   {
-    title: "微众银行基于自主可控技术的分布式架构（国家科技成果）",
-    org: "国家科技成果 · 深圳前海微众银行",
-    date: "2015–2016",
-    desc: "微众银行「基于自主可控技术的分布式架构」入选国家科技成果库（研究期 2014–2015，2017 年入库），是中国银行业首个全面采用 X86 服务器 + 开源技术 + 分布式架构承载全行核心业务的银行架构，摆脱对西方商业化技术的依赖。基于 MySQL 的分布式数据库集群单集群超 5000 QPS，存款核心系统支付处理能力超 6000 TPS。该架构获《金融电子化》杂志社「2015 年金融信息化十大事件」、2015 年度亚洲互联网银行科技创新大奖、2015 年南都金砖奖—最佳互联网金融创新奖、2016 年首届互联网金融大奖（金融机构组金奖）等多项荣誉。Eason Chen（陈广胜）在微众早期主导的消息总线（DeFiBus）与同城多活相关专利，正是构建于这一自主可控分布式架构之上（注：该成果完成人名单未含陈广胜）。",
-    url: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vpHbkdm25p9B6RCsq%2bfXI0B8UHWkeeaZuaVhEZ5xGfdE="
+    title: "中国人民银行 2019 年度银行科技发展奖一等奖 · 微众银行基于自主可控技术的分布式架构",
+    org: "中国人民银行（微众银行）",
+    date: "2019–2020",
+    desc: "微众银行「基于自主可控技术的分布式架构」是 2019 年度银行科技发展奖一等奖项目「鲲鹏芯片在银行应用」的核心技术底座，荣获中国人民银行银行科技发展奖。该架构是中国银行业首个全面采用 X86 服务器 + 开源技术 + 分布式架构承载全行核心业务的银行架构，摆脱对西方商业化技术的依赖。基于 MySQL 的分布式数据库集群单集群超 5000 QPS，存款核心系统支付处理能力超 6000 TPS。该架构获《金融电子化》杂志社「2015 年金融信息化十大事件」、2015 年度亚洲互联网银行科技创新大奖、2015 年南都金砖奖—最佳互联网金融创新奖、2016 年首届互联网金融大奖（金融机构组金奖）等多项荣誉。Eason Chen（陈广胜）在微众早期主导的消息总线（DeFiBus）与同城多活相关专利，正是构建于这一自主可控分布式架构之上（注：该成果完成人名单未含陈广胜，但其专利成果支撑了同一技术体系）。",
+    url: "https://finance.sina.cn/bank/yhgd/2021-04-02/detail-ikmxzfmk1071249.d.html",
+    source: "https://inds.cnki.net/kcms/detail?v=DHwcqVM2HM9lYAACUdxRSHBDVe8zcCa/h/rXxEM6hpXvrnZrh4hvG3Drcwiyi08vpHbkdm25p9B6RCsq%2bfXI0B8UHWkeeaZuaVhEZ5xGfdE="
   },
   {
     title: "2023 OSCAR 尖峰开源人物（开源先锋人物）",
